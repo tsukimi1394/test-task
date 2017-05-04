@@ -804,7 +804,7 @@
   .login__icon {
     width: 13px;
     display: inline-block;
-    margin-right: 6px; }
+    margin-right: 10px; }
     .login__icon-img {
       width: 100%; }
     @media only screen and (max-width: 640px) {
@@ -828,7 +828,7 @@
     font-size: 13px;
     text-transform: uppercase;
     background-color: #ee4400;
-    min-width: 191px;
+    min-width: 160px;
     padding: 15px;
     border: 1px solid #ee4400;
     font-style: italic;
@@ -887,8 +887,7 @@
       display: none; } }
   .main-menu li {
     display: inline-block;
-    margin-left: -4px;
-    padding: 28px 18px; }
+    padding: 27px 17px; }
     .main-menu li:hover {
       background-color: #ee4400; }
     .main-menu li:not(:last-child) {
@@ -942,7 +941,7 @@
 .search-input {
   width: 100%;
   color: #282828;
-  padding: 14px 12px;
+  padding: 12px;
   padding-right: 30px;
   font-size: 14px;
   border: 1px solid #282828;
@@ -1012,10 +1011,11 @@
       bottom: 24px; } }
 
 .article {
-  margin-top: 60px;
+  padding-top: 48px;
   font-family: 'PT Serif', serif;
   padding-left: 30px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  background-color: #f5f5f5; }
   .article__title {
     font-size: 48px;
     color: #282828;
@@ -1023,16 +1023,18 @@
     text-transform: capitalize;
     padding: 0;
     margin: 0;
-    margin-bottom: 48px;
+    margin-bottom: 44px;
     font-weight: normal;
-    line-height: 1.25; }
+    line-height: 1.25;
+    word-spacing: 5px; }
   .article__subtitle {
     margin: 0;
     font-weight: normal;
     font-size: 24px;
     padding: 0;
-    margin-bottom: 40px;
-    color: #282828; }
+    margin-bottom: 20px;
+    color: #282828;
+    line-height: 1.45; }
   .article__list {
     padding: 0;
     margin: 0;
@@ -1040,16 +1042,19 @@
     line-height: 1.5;
     font-size: 18px; }
     .article__list-title {
-      margin-bottom: 20px; }
+      margin-bottom: 10px;
+      font-size: 18px; }
     .article__list-list {
-      padding-left: 20px; }
+      padding-left: 20px;
+      margin: 0; }
 
 .news {
-  margin-top: 60px;
+  padding-top: 54px;
   font-family: 'Oswald', sans-serif;
-  margin-bottom: 225px;
+  padding-bottom: 225px;
   padding-left: 30px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  background-color: #f5f5f5; }
   @media only screen and (min-width: 641px) and (max-width: 768px) {
     .news {
       margin-bottom: 80px; } }
@@ -1065,7 +1070,8 @@
     font-size: 14px;
     margin-bottom: 20px;
     text-decoration: none;
-    font-weight: 400; }
+    font-weight: 400;
+    margin: 0; }
     .news__title:hover {
       color: #c30; }
     @media only screen and (max-width: 640px) {
