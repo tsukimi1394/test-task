@@ -42,6 +42,9 @@
 		font-style: italic;
 		text-transform: uppercase;
 		color: #282828;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -60,6 +63,14 @@
 		display: block;
 		text-decoration: none;
 		text-align: center;
+		&:hover {
+			box-shadow: inset 0 0 0 1px #c30,
+									0 1px 9px #300;
+		}
+		&:active {
+			box-shadow: inset 0 0 0 2px #c30,
+									inset 0 1px 6px #300;
+		}
 	}
 	&__icon {
 		width: 13px;
