@@ -3,29 +3,34 @@
   <head>
     <title>Test task</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header>
-      <div class="logo"><img src="images/logo.png" alt="logo"></div>
-      <h1>my first webpage</h1>
-      <div class="login">
-        <div class="login__icon"><img src="images/key.png" alt="key"></div><span class="login__text">Login</span>
+    <header class="header">
+      <div class="header-left">
+        <div class="logo"><img class="logo-img" src="images/logo-min.png" alt="logo"></div>
+        <h1 class="header__title">my first webpage</h1>
       </div>
-      <div class="contact">
-        <button class="contact__button">Contact me</button>
-        <div class="contact__icon"><img src="images/contact.png"></div>
+      <div class="header-right"><a class="login" href="#">
+          <div class="login__icon"><img class="login__icon-img" src="images/key.svg" alt="key"></div><span class="login__text">Login</span></a>
+        <div class="contact"><a class="contact__button" href="mailto:example@example.com">Contact me</a>
+          <div class="contact__icon"><a href="mailto:example@example.com"><img class="contact__icon-img" src="images/contact.svg" alt="contact"></a></div>
+        </div>
       </div>
     </header>
-    <div class="nav-search">
-      <nav class="nav"><a href="#">Home</a><a href="#">About</a><a href="#">News</a><a href="#">Portfolio</a><a href="#">Blog</a></nav>
-      <form class="search-form">
-        <div class="input-wrapper">
-          <input class="search-input" type="search" placeholder="search">
-          <div class="search-icon"></div>
-        </div>
-      </form>
+    <div class="nav-search-wrapper">
+      <div class="nav-search">
+        <nav class="nav"><a class="nav__item" href="#">Home</a><a class="nav__item" href="#">About</a><a class="nav__item" href="#">News</a><a class="nav__item" href="#">Portfolio</a><a class="nav__item" href="#">Blog</a></nav>
+        <form class="search-form" action="#">
+          <div class="input-wrapper">
+            <input class="search-input" type="search" placeholder="search">
+            <div class="search-icon"></div>
+          </div>
+        </form>
+      </div>
     </div>
     <article class="article">
       <h2 class="article__title">What 10 things should you do every day to improve your life?</h2>
@@ -41,28 +46,28 @@
     <div class="news">
       <h3 class="news__title"></h3>
       <div class="news__item">
-        <div class="news__img"><img src="images/news1.jpg" alt="news1"></div>
+        <div class="news__img"><img src="images/news1-min.jpg" alt="news1"></div>
         <h4 class="news__title">Being in nature reduces stress, makes you more creative</h4>
       </div>
       <div class="news__item">
-        <div class="news__img"><img src="images/news2.jpg" alt="news2"></div>
-        <h4 class="news__title">Usability testing for mobile is easy</h4>
+        <div class="news__img"><img src="images/news2-min.jpg" alt="news2"></div>
+        <h4 class="news__title">Usability Testing for Mobile Is Easy</h4>
       </div>
       <div class="news__item">
-        <div class="news__img"><img src="images/news3.jpg" alt="news3"></div>
-        <h4 class="news__title">Infinite scrolling is not for every website</h4>
+        <div class="news__img"><img src="images/news3-min.jpg" alt="news3"></div>
+        <h4 class="news__title">Infinite Scrolling Is Not for Every Website</h4>
       </div>
       <div class="news__item">
-        <div class="news__img"><img src="images/news4.jpg" alt="news4"></div>
-        <h4 class="news__title">Ecommerce UX: 3 design trends to follow and 3 to avoid</h4>
+        <div class="news__img"><img src="images/news4-min.jpg" alt="news4"></div>
+        <h4 class="news__title">Ecommerce UX: 3 Design Trends to Follow and 3 to Avoid</h4>
       </div>
       <div class="news__item">
-        <div class="news__img"><img src="images/news5.jpg" alt="news5"></div>
-        <h4 class="news__title">University websites: top 10 design guidelines</h4>
+        <div class="news__img"><img src="images/news5-min.jpg" alt="news5"></div>
+        <h4 class="news__title">University Websites: Top 10 Design Guidelines</h4>
       </div>
       <div class="news__item">
-        <div class="news__img"><img src="images/news6.jpg" alt="news6"></div>
-        <h4 class="news__title">University websites: top 10 design guidelines</h4>
+        <div class="news__img"><img src="images/news6-min.jpg" alt="news6"></div>
+        <h4 class="news__title">University Websites: Top 10 Design Guidelines</h4>
       </div>
     </div>
     <div class="to-top"><span>top</span></div>

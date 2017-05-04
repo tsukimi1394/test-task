@@ -3,32 +3,38 @@ html(lang="en")
 	head
 		title= "Test task"
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Oswald:300,400", rel="stylesheet")
 		link(rel="stylesheet", type="text/css", href="css/normalize.css")
 		link(rel="stylesheet", type= "text/css", href="css/style.css")
 	body
-		header
-			div(class="logo")
-				img(src="images/logo.png", alt="logo")
-			h1 my first webpage
-			div(class="login")
-				div(class="login__icon")
-					img(src="images/key.png", alt="key")
-				span(class="login__text") Login
-			div(class="contact")
-				button(class="contact__button") Contact me
-				div(class="contact__icon")
-					img(src="images/contact.png")
-		div(class="nav-search")
-			nav(class="nav")
-				a(href="#") Home
-				a(href="#") About
-				a(href="#") News
-				a(href="#") Portfolio
-				a(href="#") Blog
-			form(class="search-form")
-				div(class="input-wrapper")
-					input(type="search", placeholder="search", class="search-input")
-					div(class="search-icon")
+		header(class="header")
+			div(class="header-left")
+				div(class="logo")
+					img(src="images/logo-min.png", alt="logo", class="logo-img")
+				h1(class="header__title") my first webpage
+			div(class="header-right")
+				a(href="#", class="login")
+					div(class="login__icon")
+						img(src="images/key.svg", alt="key", class="login__icon-img")
+					span(class="login__text") Login
+				div(class="contact")
+					a(href="mailto:example@example.com", class="contact__button") Contact me
+					div(class="contact__icon")
+						a(href="mailto:example@example.com")
+							img(src="images/contact.svg", alt="contact", class="contact__icon-img")
+		div(class="nav-search-wrapper")
+			div(class="nav-search")
+				nav(class="nav")
+					a(href="#", class="nav__item") Home
+					a(href="#", class="nav__item") About
+					a(href="#", class="nav__item") News
+					a(href="#", class="nav__item") Portfolio
+					a(href="#", class="nav__item") Blog
+				form(action="#", class="search-form")
+					div(class="input-wrapper")
+						input(type="search", placeholder="search", class="search-input")
+						div(class="search-icon")
 		article(class="article")
 			h2(class="article__title") What 10 things should you do every day to improve your life?
 			p(class="article__text") Learning another language can keep your mind sharp. Music lessons increase intelligence. Challenging your beliefs strengthens your mind. Increasing willpower just takes a little effort each day and it's more responsible for your success than IQ.
@@ -42,27 +48,27 @@ html(lang="en")
 			h3(class="news__title")
 			div(class="news__item")
 				div(class="news__img")
-					img(src="images/news1.jpg", alt="news1")
+					img(src="images/news1-min.jpg", alt="news1")
 				h4(class="news__title") Being in nature reduces stress, makes you more creative
 			div(class="news__item")
 				div(class="news__img")
-					img(src="images/news2.jpg", alt="news2")
-				h4(class="news__title") Usability testing for mobile is easy
+					img(src="images/news2-min.jpg", alt="news2")
+				h4(class="news__title") Usability Testing for Mobile Is Easy
 			div(class="news__item")
 				div(class="news__img")
-					img(src="images/news3.jpg", alt="news3")
-				h4(class="news__title") Infinite scrolling is not for every website
+					img(src="images/news3-min.jpg", alt="news3")
+				h4(class="news__title") Infinite Scrolling Is Not for Every Website
 			div(class="news__item")
 				div(class="news__img")
-					img(src="images/news4.jpg", alt="news4")
-				h4(class="news__title") Ecommerce UX: 3 design trends to follow and 3 to avoid
+					img(src="images/news4-min.jpg", alt="news4")
+				h4(class="news__title") Ecommerce UX: 3 Design Trends to Follow and 3 to Avoid
 			div(class="news__item")
 				div(class="news__img")
-					img(src="images/news5.jpg", alt="news5")
-				h4(class="news__title") University websites: top 10 design guidelines
+					img(src="images/news5-min.jpg", alt="news5")
+				h4(class="news__title") University Websites: Top 10 Design Guidelines
 			div(class="news__item")
 				div(class="news__img")
-					img(src="images/news6.jpg", alt="news6")
-				h4(class="news__title") University websites: top 10 design guidelines
+					img(src="images/news6-min.jpg", alt="news6")
+				h4(class="news__title") University Websites: Top 10 Design Guidelines
 		div(class="to-top")
 			span top
