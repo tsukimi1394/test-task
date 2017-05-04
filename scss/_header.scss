@@ -1,26 +1,29 @@
 .header {
-	max-width: 1132px;
-	margin: 30px auto;
 	display: flex;
 	justify-content: space-between;
-	font-family: 'PT Serif', serif;
-	padding-left: 30px;
+	max-width: $width-of-site;
+	margin: 30px auto;
 	padding-right: 30px;
+	padding-left: 30px;
+
+	font-family: $header-font-family;
 	&-right {
-		align-self: center;
 		@include respond-to(handhelds) {
 			display: flex;
-			justify-content: space-around;
 			flex-direction: column;
+			justify-content: space-around;
 			align-self: stretch;
 		}
+
+		align-self: center;
 	}
 	&__title {
-		font-size: 18px;
+		display: inline-block;
+
+		color: $header-title-color;
 		font-style: italic;
 		font-weight: normal;
-		display: inline-block;
-		color: #939393;
+		font-size: $header-title-font;
 	}
 }
 
@@ -36,28 +39,31 @@
 .login {
 	display: inline-block;
 	margin-right: 29px;
+
 	text-decoration: none;
 	&__icon {
-		width: 13px;
+		@include respond-to(handhelds) {
+			width: 20px;
+		}
+
 		display: inline-block;
+		width: 13px;
 		margin-right: 10px;
 		&-img {
 			width: 100%;
 		}
-		@include respond-to(handhelds) {
-			width: 20px;
-		}
 	}
 	&__text {
-		font-size: 13px;
-		font-style: italic;
-		text-transform: uppercase;
-		color: #282828;
-		&:hover {
-			text-decoration: underline;
-		}
 		@include respond-to(handhelds) {
 			display: none;
+		}
+
+		color: $black;
+		font-style: italic;
+		font-size: $header-text-font;
+		text-transform: uppercase;
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 }
@@ -65,39 +71,44 @@
 .contact {
 	display: inline-block;
 	&__button {
-		color: #fff;
-		font-size: 13px;
-		text-transform: uppercase;
-		background-color: #ee4400;
-		min-width: 160px;
-		padding: 15px;
-		border: 1px solid #ee4400;
-		font-style: italic;
-		cursor: pointer;
-		display: block;
-		text-decoration: none;
-		text-align: center;
-		&:hover {
-			box-shadow: inset 0 0 0 1px #c30,
-									0 1px 9px #300;
-		}
-		&:active {
-			box-shadow: inset 0 0 0 2px #c30,
-									inset 0 1px 6px #300;
-		}
 		@include respond-to(handhelds) {
 			display: none;
 		}
+
+		display: block;
+		min-width: 160px;
+		padding: 15px;
+		border: 1px solid $orange;
+
+		background-color: $orange;
+
+		color: $white;
+		font-style: italic;
+		font-size: $header-text-font;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		cursor: pointer;
+		&:hover {
+			box-shadow: inset 0 0 0 1px $dark-orange,
+			0 1px 9px $dark-dark-orange;
+		}
+		&:active {
+			box-shadow: inset 0 0 0 2px $dark-orange,
+			inset 0 1px 6px $dark-dark-orange;
+		}
 	}
 	&__icon {
-		width: 13px;
-		display: none;
-		&-img {
-			width: 100%;
-		}
 		@include respond-to(handhelds) {
 			display: block;
 			width: 20px;
+		}
+
+		display: none;
+		width: 13px;
+		&-img {
+			width: 100%;
 		}
 	}
 }

@@ -1,19 +1,21 @@
 .nav-search-wrapper {
-	background-color: #282828;
+	background-color: $black;
 }
 
 .nav-search {
-	max-width: 1132px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	font-family: 'Oswald', sans-serif;
-	padding-left: 30px;
-	padding-right: 30px;
 	@include respond-to(handhelds) {
 		flex-direction: column;
 		padding: 15px 30px;
 	}
+
+	display: flex;
+	justify-content: space-between;
+	max-width: $width-of-site;
+	margin: 0 auto;
+	padding-right: 30px;
+	padding-left: 30px;
+
+	font-family: $nav-search-font-family;
 }
 
 #menu-checkbox {
@@ -30,48 +32,41 @@
 	@include respond-to(handhelds) {
 		display: none;
 	}
+
 	margin: 0;
 	padding: 0;
 	li {
+		@include respond-to(handhelds) {
+			display: block;
+		}
+
 		display: inline-block;
 		padding: 27px 17px;
 		&:hover {
-			background-color: #ee4400;
+			background-color: $orange;
 		}
 		&:not(:last-child) {
 			margin-right: 0;
 		}
-		@include respond-to(handhelds) {
-			display: block;
-		}
 	}
 	&__item {
-		color: #fff;
-		font-size: 18px;
+		@include respond-to(handhelds) {
+			display: block;
+
+			text-align: center;
+		}
+
+		display: inline-block;
+
+		color: $white;
+		font-size: $nav-item-font;
 		letter-spacing: 0.05rem;
 		text-transform: uppercase;
 		text-decoration: none;
-		display: inline-block;
-		@include respond-to(handhelds) {
-			display: block;
-			text-align: center;
-		}
 	}
 }
 
 .toggle-button {
-	text-align: center;
-	display: block;
-	cursor: pointer;
-	background-color: #282828;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 24px;
-	&::after {
-		content: attr(data-open);
-		display: block;
-		margin: 10px 0;
-	}
 	@include respond-to(tablets) {
 		display: none;
 	}
@@ -81,6 +76,23 @@
 	@include respond-to(wide-screens) {
 		display: none;
 	}
+
+	display: block;
+
+	background-color: $black;
+
+	color: $white;
+	font-size: $nav-menu-title-font;
+	text-align: center;
+	text-transform: uppercase;
+
+	cursor: pointer;
+	&::after {
+		content: attr(data-open);
+
+		display: block;
+		margin: 10px 0;
+	}
 }
 
 .search-form {
@@ -89,22 +101,25 @@
 
 .input-wrapper {
 	position: relative;
+
 	width: 269px;
 }
 
 .search-input {
 	width: 100%;
-	color: #282828;
 	padding: 12px;
 	padding-right: 30px;
-	font-size: 14px;
 	border: 1px solid #282828;
+
 	outline: none;
-	font-family: 'Oswald', sans-serif;
+
+	color: $black;
+	font-family: $nav-search-font-family;
+	font-size: $search-font;
 	&::placeholder {
-		text-transform: uppercase;
-		color: #d4d4d4;
+		color: $search-placeholder-color;
 		font-weight: 300;
+		text-transform: uppercase;
 	}
 }
 
@@ -112,53 +127,66 @@
 	position: absolute;
 	top: 50%;
 	right: 0;
-	margin-right: 15px;
+
 	width: 10px;
 	height: 10px;
-	border: 3px solid #81858c;
+	margin-right: 15px;
+	border: 3px solid $search-icon-color;
+
 	border-radius: 100%;
+
 	transform: translateY(-50%) rotate(-45deg);
+
 	pointer-events: none;
 	&::before {
 		content: '';
+
 		position: absolute;
 		top: 11px;
 		left: 3px;
-		height: 8px;
+
 		width: 3px;
-		background-color: #81858c;
+		height: 8px;
+
+		background-color: $search-icon-color;
 	}
 }
 
 .to-top {
-	position: fixed;
-	bottom: 64px;
-	right: 26px;
-	display: block;
-	font-family: 'Oswald', sans-serif;
-	font-weight: 300;
-	font-size: 14px;
-	color: #282828;
-	text-decoration: none;
-	&::before {
-		content: ''; 
-		position: absolute; 
-		top: 50%;
-		right: 100%;
-		width: 6px; 
-		height: 6px; 
-		margin-right: 7px;
-		border-left: 1px solid currentColor; 
-		border-top: 1px solid currentColor; 
-		transform: translateY(-50%) rotate(45deg);
-	}
-	&:hover {
-		text-decoration: underline;
-	}
 	@include respond-to(handhelds) {
 		display: none;
 	}
 	@include respond-to(tablets) {
 		bottom: 24px;
+	}
+
+	position: fixed;
+	right: 26px;
+	bottom: 64px;
+
+	display: block;
+
+	color: $black;
+	font-family: $nav-search-font-family;
+	font-weight: 300;
+	font-size: $to-top-font;
+	text-decoration: none;
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: 50%;
+		right: 100%;
+
+		width: 6px;
+		height: 6px;
+		margin-right: 7px;
+		border-top: 1px solid currentColor;
+		border-left: 1px solid currentColor;
+
+		transform: translateY(-50%) rotate(45deg);
+	}
+	&:hover {
+		text-decoration: underline;
 	}
 }
