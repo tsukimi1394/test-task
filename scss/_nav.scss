@@ -8,9 +8,44 @@
 	display: flex;
 	justify-content: space-between;
 	font-family: 'Oswald', sans-serif;
+	padding-left: 30px;
+	padding-right: 30px;
+	@include respond-to(handhelds) {
+		flex-direction: column;
+		padding: 15px 30px;
+	}
 }
 
-.nav {
+#menu-checkbox {
+	display: none;
+	&:checked + [role="navigation"] .main-menu {
+		display: block;
+	}
+	&:checked + [role="navigation"] .toggle-button::after {
+		content: attr(data-close);
+	}
+}
+
+.main-menu {
+	@include respond-to(handhelds) {
+		display: none;
+	}
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline-block;
+		margin-left: -4px;
+		padding: 28px 18px;
+		&:hover {
+			background-color: #ee4400;
+		}
+		&:not(:last-child) {
+			margin-right: 0;
+		}
+		@include respond-to(handhelds) {
+			display: block;
+		}
+	}
 	&__item {
 		color: #fff;
 		font-size: 18px;
@@ -18,12 +53,34 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		display: inline-block;
-		margin-right: -4px;
-		margin-left: -4px;
-		padding: 28px 18px;
-		&:hover {
-			background-color: #ee4400;
+		@include respond-to(handhelds) {
+			display: block;
+			text-align: center;
 		}
+	}
+}
+
+.toggle-button {
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	background-color: #282828;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 24px;
+	&::after {
+		content: attr(data-open);
+		display: block;
+		margin: 10px 0;
+	}
+	@include respond-to(tablets) {
+		display: none;
+	}
+	@include respond-to(medium-screens) {
+		display: none;
+	}
+	@include respond-to(wide-screens) {
+		display: none;
 	}
 }
 
@@ -98,5 +155,11 @@
 	}
 	&:hover {
 		text-decoration: underline;
+	}
+	@include respond-to(handhelds) {
+		display: none;
+	}
+	@include respond-to(tablets) {
+		bottom: 24px;
 	}
 }

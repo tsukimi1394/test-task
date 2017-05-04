@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
 	head
 		title= "Test task"
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no")
 		link(href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i", rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css?family=Oswald:300,400", rel="stylesheet")
 		link(rel="stylesheet", type="text/css", href="css/normalize.css")
@@ -25,23 +25,31 @@ html(lang="en")
 							img(src="images/contact.svg", alt="contact", class="contact__icon-img")
 		div(class="nav-search-wrapper")
 			div(class="nav-search")
-				nav(class="nav")
-					a(href="#", class="nav__item") Home
-					a(href="#", class="nav__item") About
-					a(href="#", class="nav__item") News
-					a(href="#", class="nav__item") Portfolio
-					a(href="#", class="nav__item") Blog
+				input(type="checkbox", id="menu-checkbox")
+				nav(role="navigation")
+					label(for="menu-checkbox", class="toggle-button", data-open="Menu", data-close="Close" onclick)
+					ul(class="main-menu")
+						li
+							a(href="#", class="main-menu__item") Home
+						li
+							a(href="#", class="main-menu__item") About
+						li
+							a(href="#", class="main-menu__item") News
+						li
+							a(href="#", class="main-menu__item") Portfolio
+						li
+							a(href="#", class="main-menu__item") Blog
 				form(action="#", class="search-form")
 					div(class="input-wrapper")
 						input(type="search", placeholder="search", class="search-input")
 						div(class="search-icon")
 		article(class="article")
 			div(class="row")
-				h1(class="article__title large-8 columns") What 10 things should you do every day to improve your life?
+				h1(class="article__title large-8 small-12 columns") What 10 things should you do every day to improve your life?
 			div(class="row")
-				h2(class="article__subtitle large-9 columns") Learning another language can keep your mind sharp. Music lessons increase intelligence. Challenging your beliefs strengthens your mind. Increasing willpower just takes a little effort each day and it's more responsible for your success than IQ.
+				h2(class="article__subtitle large-9 small-12 columns") Learning another language can keep your mind sharp. Music lessons increase intelligence. Challenging your beliefs strengthens your mind. Increasing willpower just takes a little effort each day and it's more responsible for your success than IQ.
 			div(class="row")
-				div(class="article__list large-5 columns")
+				div(class="article__list large-5 small-12 columns")
 					h3(class="article__list-title") Key features
 					ul(class="article__list-list")
 						li(class="article__list-item") It will make you happier.
@@ -50,29 +58,29 @@ html(lang="en")
 						li(class="article__list-item") It can make life better for everyone around you.
 		div(class="news")
 			div(class="row")
-				a(href="#", class="news__title large-1 column") Recent news
+				a(href="#", class="news__title large-1 small-12 column") Recent news
 			div(class="row")
-				a(href="#", class="news__item large-2 columns")
+				a(href="#", class="news__item large-2 medium-4 small-12 columns")
 					div(class="news__item-img-wrapper")
 						img(src="images/news1-min.jpg", alt="news1", class="news__item-img")
 					h4(class="news__item-title") Being in nature reduces stress, makes you more creative
-				a(href="#", class="news__item large-2 columns")
+				a(href="#", class="news__item large-2 medium-4 small-12 columns")
 					div(class="news__item-img-wrapper")
 						img(src="images/news2-min.jpg", alt="news2", class="news__item-img")
 					h4(class="news__item-title") Usability Testing for Mobile Is Easy
-				a(href="#", class="news__item large-2 columns")
+				a(href="#", class="news__item large-2 medium-4 small-12 columns")
 					div(class="news__item-img-wrapper")
 						img(src="images/news3-min.jpg", alt="news3", class="news__item-img")
 					h4(class="news__item-title") Infinite Scrolling Is Not for Every Website
-				a(href="#", class="news__item large-2 columns")
+				a(href="#", class="news__item large-2 medium-4 small-12 columns")
 					div(class="news__item-img-wrapper")
 						img(src="images/news4-min.jpg", alt="news4", class="news__item-img")
 					h4(class="news__item-title") Ecommerce UX: 3 Design Trends to Follow and 3 to Avoid
-				a(href="#", class="news__item large-2 columns")
+				a(href="#", class="news__item large-2 medium-4 small-12 columns")
 					div(class="news__item-img-wrapper")
 						img(src="images/news5-min.jpg", alt="news5", class="news__item-img")
 					h4(class="news__item-title") University Websites: Top 10 Design Guidelines
-				a(href="#", class="news__item large-2 columns")
+				a(href="#", class="news__item large-2 medium-4 small-12 columns")
 					div(class="news__item-img-wrapper")
 						img(src="images/news6-min.jpg", alt="news6", class="news__item-img")
 					h4(class="news__item-title") University Websites: Top 10 Design Guidelines
