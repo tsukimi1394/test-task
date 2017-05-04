@@ -12,7 +12,7 @@ html(lang="en")
 			div(class="header-left")
 				div(class="logo")
 					img(src="images/logo-min.png", alt="logo", class="logo-img")
-				h1(class="header__title") my first webpage
+				span(class="header__title") my first webpage
 			div(class="header-right")
 				a(href="#", class="login")
 					div(class="login__icon")
@@ -36,39 +36,44 @@ html(lang="en")
 						input(type="search", placeholder="search", class="search-input")
 						div(class="search-icon")
 		article(class="article")
-			h2(class="article__title") What 10 things should you do every day to improve your life?
-			p(class="article__text") Learning another language can keep your mind sharp. Music lessons increase intelligence. Challenging your beliefs strengthens your mind. Increasing willpower just takes a little effort each day and it's more responsible for your success than IQ.
-			h3(class="article__subtitle") Key features
-			ul(class="article__list")
-				li It will make you happier.
-				li It will improve yout relationships.
-				li It can make you a better person.
-				li It can make life better for everyone around you.
-		div(class="news")
-			h3(class="news__title")
-			div(class="news__item")
-				div(class="news__img")
-					img(src="images/news1-min.jpg", alt="news1")
-				h4(class="news__title") Being in nature reduces stress, makes you more creative
-			div(class="news__item")
-				div(class="news__img")
-					img(src="images/news2-min.jpg", alt="news2")
-				h4(class="news__title") Usability Testing for Mobile Is Easy
-			div(class="news__item")
-				div(class="news__img")
-					img(src="images/news3-min.jpg", alt="news3")
-				h4(class="news__title") Infinite Scrolling Is Not for Every Website
-			div(class="news__item")
-				div(class="news__img")
-					img(src="images/news4-min.jpg", alt="news4")
-				h4(class="news__title") Ecommerce UX: 3 Design Trends to Follow and 3 to Avoid
-			div(class="news__item")
-				div(class="news__img")
-					img(src="images/news5-min.jpg", alt="news5")
-				h4(class="news__title") University Websites: Top 10 Design Guidelines
-			div(class="news__item")
-				div(class="news__img")
-					img(src="images/news6-min.jpg", alt="news6")
-				h4(class="news__title") University Websites: Top 10 Design Guidelines
+			div(class="row")
+				h1(class="article__title large-8 columns") What 10 things should you do every day to improve your life?
+			div(class="row")
+				h2(class="article__subtitle large-9 columns") Learning another language can keep your mind sharp. Music lessons increase intelligence. Challenging your beliefs strengthens your mind. Increasing willpower just takes a little effort each day and it's more responsible for your success than IQ.
+			div(class="row")
+				div(class="article__list large-5 columns")
+					h3(class="article__list-title") Key features
+					ul(class="article__list-list")
+						li(class="article__list-item") It will make you happier.
+						li(class="article__list-item") It will improve your relationships.
+						li(class="article__list-item") It can make you a better person.
+						li(class="article__list-item") It can make life better for everyone around you.
+		div(class="row")
+			div(class="news")
+				h3(class="news__title")
+				div(class="news__item")
+					div(class="news__img")
+						img(src="images/news1-min.jpg", alt="news1")
+					h4(class="news__title") Being in nature reduces stress, makes you more creative
+				div(class="news__item")
+					div(class="news__img")
+						img(src="images/news2-min.jpg", alt="news2")
+					h4(class="news__title") Usability Testing for Mobile Is Easy
+				div(class="news__item")
+					div(class="news__img")
+						img(src="images/news3-min.jpg", alt="news3")
+					h4(class="news__title") Infinite Scrolling Is Not for Every Website
+				div(class="news__item")
+					div(class="news__img")
+						img(src="images/news4-min.jpg", alt="news4")
+					h4(class="news__title") Ecommerce UX: 3 Design Trends to Follow and 3 to Avoid
+				div(class="news__item")
+					div(class="news__img")
+						img(src="images/news5-min.jpg", alt="news5")
+					h4(class="news__title") University Websites: Top 10 Design Guidelines
+				div(class="news__item")
+					div(class="news__img")
+						img(src="images/news6-min.jpg", alt="news6")
+					h4(class="news__title") University Websites: Top 10 Design Guidelines
 		div(class="to-top")
 			span top

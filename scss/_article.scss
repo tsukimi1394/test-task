@@ -1,4 +1,37 @@
 .article {
 	max-width: 1132px;
 	margin: 60px auto;
+	font-family: 'PT Serif', serif;
+	&__title {
+		font-size: 48px;
+		color: #282828;
+		font-family: 'Oswald', sans-serif;
+		text-transform: capitalize;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 48px;
+		font-weight: normal;
+		line-height: 1.25;
+	}
+	&__subtitle {
+		margin: 0;
+		font-weight: normal;
+		font-size: 24px;
+		padding: 0;
+		margin-bottom: 40px;
+		color: #282828;
+	}
+	&__list {
+		padding: 0;
+		margin: 0;
+		color: #282828;
+		line-height: 1.5;
+		font-size: 18px;
+		&-title {
+			margin-bottom: 20px;
+		}
+		&-list {
+			padding-left: 20px;
+		}
+	}
 }
